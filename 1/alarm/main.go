@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"time"
 )
 
@@ -11,12 +12,13 @@ func Remind(text string, delay time.Duration) {
 	Remind(text, delay)
 }
 
+var wg sync.WaitGroup
+
 func main() {
+	wg.Add(3)
 	go Remind("Time to eat", time.Second*10)
 	go Remind("Time to work", time.Second*30)
 	go Remind("Time to sleep", time.Second*60)
 
-	for {
-		// Prevent main thread from sleeping
-	}
+	wg.Wait() // Prevent main thread from sleeping
 }
