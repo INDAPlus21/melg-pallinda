@@ -65,7 +65,7 @@ func makeProphecies(answers chan<- string) {
 
 	nonsense := []string{
 		"If you close your eyes you will not see",
-		"You future looks bright",
+		"Your future looks bright",
 		"Every step you take is a step towards the end",
 		"I can see that you have the right spirit inside of you",
 		"Not even the gods are perfect",
