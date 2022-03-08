@@ -1,0 +1,1 @@
+The issue was that the main thread shut down before the print thread was done so now it waits for both threads to complete by using a waitgroup. It also shuts down the channel when it's finished sending to avoid a sleeping thread deadlock
