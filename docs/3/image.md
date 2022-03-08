@@ -1,0 +1,1 @@
+Non-parellized took 23.7 seconds while parallizing the different image functions took 19.0 seconds. Whilst parallizing each row in each image took 9.5 seconds. After testing the fastest version was to parallize each image and groups of 300 pixels, this took 8.6 seconds
