@@ -45,7 +45,7 @@ func WordCount(text []string) map[string]int {
 	merged := make(map[string]int)
 	for m := range c {
 		for k, v := range m {
-			merged[k] = v
+			merged[k] += v
 		}
 	}
 

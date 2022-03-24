@@ -47,7 +47,7 @@ func TestWordCountOnLoremIpsum(t *testing.T) {
 		"vel": 996, "velit": 756, "venenatis": 501, "vestibulum": 588, "vitae": 1634,
 		"vivamus": 184, "viverra": 1292, "volutpat": 948, "vulputate": 686}
 
-	if actual := WordCount(string(data)); !reflect.DeepEqual(actual, expected) {
+	if actual := WordCount([]string{string(data)}); !reflect.DeepEqual(actual, expected) {
 		t.Errorf("expected: %v\nactual: %v", expected, actual)
 	}
 
