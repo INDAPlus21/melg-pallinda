@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"strings"
 	"time"
 )
 
@@ -12,9 +13,9 @@ const DataFile = "loremipsum.txt"
 func WordCount(text string) map[string]int {
 	freqs := make(map[string]int)
 
-	/*for _, word := range strings.Fields(text) {
+	for _, word := range strings.Fields(text) {
 		freqs[strings.Trim(strings.Trim(strings.ToLower(word), "."), ",")]++
-	}*/
+	}
 
 	return freqs
 }
